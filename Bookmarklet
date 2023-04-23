@@ -1,0 +1,115 @@
+javascript:(function(){
+  var iframe = document.createElement('iframe');
+  iframe.style.position = 'fixed';
+iframe.style.top = '50%';
+iframe.style.left = '50%';
+iframe.style.transform = 'translate(-50%, -50%)';
+iframe.style.background = 'linear-gradient(to bottom, #363636 0%, #000000 100%)';
+iframe.style.borderRadius = '10px';
+iframe.style.padding = '20px';
+iframe.style.zIndex = '9999';
+iframe.style.width = '400px';
+iframe.style.height = '400px';
+
+  iframe.onload = function() {
+    var doc = iframe.contentWindow.document;
+    doc.body.style.backgroundColor = "transparent";
+    doc.body.style.textAlign = "center";
+    doc.body.style.fontFamily = "Verdana";
+    
+    var input = doc.createElement('input');
+    input.type = "text";
+    input.style = 'width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px';
+    doc.body.appendChild(input);
+    
+    var button = doc.createElement('button');
+    button.textContent = "Launch *Version 1.0*";
+    button.style.width = '80%';
+button.style.padding = '10px';
+button.style.backgroundColor = '#000000';
+button.style.color = '#fff';
+button.style.border = 'none';
+button.style.marginTop = '10px';
+
+button.style.marginBottom = '10px';
+button.style.borderRadius = '5px';
+button.style.fontSize = '18px';
+button.style.display = 'inline-block';
+button.style.verticalAlign = 'middle';
+    button.addEventListener('click', function() {
+      var proxyUrl = "https://uld4ym.sse-0.codesandbox.io/proxy/" + input.value;
+      window.open(proxyUrl);
+      alert("Launching! If it didnt work try a website URL, not a word.");
+    });
+    doc.body.appendChild(button);
+    
+    var img = doc.createElement('img');
+    img.src = "https://i.postimg.cc/L54L2xdX/Crypt-Logo.png";
+    img.style = 'max-width: 80%; height: auto; margin: auto; display: block; margin-bottom: 10px;';
+    doc.body.appendChild(img);
+    
+    var close = doc.createElement('button');
+    close.textContent = "Quit";
+    close.style.width = '80%';
+close.style.padding = '10px';
+close.style.backgroundColor = '#000000';
+close.style.color = '#fff';
+close.style.border = 'none';
+close.style.borderRadius = '5px';
+close.style.marginTop = '10px';
+
+close.style.marginBottom = '10px';
+close.style.fontSize = '18px';
+close.style.display = 'inline-block';
+close.style.verticalAlign = 'middle';
+    close.addEventListener('click', function() {
+      iframe.remove();
+      alert("Glad to be at your service!");
+    });
+    doc.body.appendChild(close);
+
+		var customButton = doc.createElement('button');
+    customButton.textContent = "Load J-Void I-Ready Exploits";
+    customButton.style.width = '80%';
+customButton.style.padding = '10px';
+customButton.style.backgroundColor = '#000000';
+customButton.style.color = '#fff';
+customButton.style.border = 'none';
+customButton.style.borderRadius = '5px';
+customButton.style.marginTop = '10px';
+customButton.style.marginBottom = '10px';
+
+customButton.style.fontSize = '18px';
+customButton.style.display = 'inline-block';
+customButton.style.verticalAlign = 'middle';
+
+    customButton.addEventListener('click', function() {
+      fetch('https://raw.githubusercontent.com/RipAngelhacks/i-skip/main/main.js')
+        .then(r => r.text())
+        .then(r => eval(r));
+			alert("Loaded!");
+    });
+    doc.body.appendChild(customButton);
+
+
+		
+    var growOnHover = function(element) {
+      var scale = 1.1;
+      element.addEventListener('mouseenter', function() {
+        element.style.transform = 'scale(' + scale + ')';
+        element.style.transition = 'all 0.2s ease-in-out';
+      });
+      element.addEventListener('mouseleave', function() {
+        element.style.transform = 'scale(1)';
+        element.style.transition = 'all 0.2s ease-in-out';
+      });
+    };
+    
+    growOnHover(button);
+    growOnHover(close);
+  };
+  
+  iframe.src = "about:blank";
+  document.body.appendChild(iframe);
+  alert("You are currently using CryptWeb model X. Click OK to continue.");
+})();
