@@ -111,5 +111,5 @@ customButton.style.verticalAlign = 'middle';
   
   iframe.src = "about:blank";
   document.body.appendChild(iframe);
-  alert("You are currently using CryptWeb model X. Click OK to continue.");
+  alert("You are currently using CryptWeb model X. Click OK to continue. https://github.com/WeirdAlYankovicsSon/CryptWeb");
 })();
