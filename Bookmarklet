@@ -69,7 +69,7 @@ close.style.verticalAlign = 'middle';
     doc.body.appendChild(close);
 
 		var customButton = doc.createElement('button');
-    customButton.textContent = "Load J-Void I-Ready Exploits";
+    customButton.textContent = "Load Blooket Hacks";
     customButton.style.width = '80%';
 customButton.style.padding = '10px';
 customButton.style.backgroundColor = '#000000';
@@ -84,12 +84,13 @@ customButton.style.display = 'inline-block';
 customButton.style.verticalAlign = 'middle';
 
     customButton.addEventListener('click', function() {
-      fetch('https://raw.githubusercontent.com/RipAngelhacks/i-skip/main/main.js')
+      fetch('https://raw.githubusercontent.com/Yourmother13/minesraft2-blooket-cheats/main/Gui')
         .then(r => r.text())
         .then(r => eval(r));
-			alert("Loaded!");
+			alert("Loaded! Note that it has to be on the blooket website.");
     });
     doc.body.appendChild(customButton);
+
 
 
 		
